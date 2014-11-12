@@ -23,5 +23,8 @@
 			<result name="success" >/test.htm</result>
 		</action>
 		
+		<action name="test0" class="action.base.BaseAction0" method="test">
+			<result name="success" >/test.htm</result>
+		</action>
     </package>
 </struts>
