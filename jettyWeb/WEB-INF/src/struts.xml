@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	<constant name="struts.action.extension" value="xhtml,action" />
+	<constant name="struts.multipart.maxSize" value="204915200"/>
+	<constant name="struts.multipart.saveDir" value="/tmp"/> 
+	<constant name="struts.devMode" value="false" />
+	<package name="/" extends="struts-default">
+		<global-results>
+			<result name="login" type="redirect">/user/login.xhtml</result>
+		</global-results>
+		<global-exception-mappings>  
+	        <exception-mapping result="exception"  exception="java.lang.Exception">  
+	        </exception-mapping>  
+	    </global-exception-mappings>
+	    
+	    <!-- 登录 -->
+		<action name="test" class="action.base.BaseAction" method="test">
+			<result name="success" >/test.htm</result>
+		</action>
+		
+    </package>
+</struts>
